@@ -20,7 +20,7 @@ puts "&lt;meta http-equiv='Refresh' content='0;URL=#{url}'&gt;"
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
-	<string>source.ruby.rails, text.html.ruby, text.haml</string>
+	<string>source.ruby.rails, text.html.erb.rails, text.haml</string>
 	<key>uuid</key>
 	<string>32F30207-D827-46D9-889A-451C35269D52</string>
 </dict>

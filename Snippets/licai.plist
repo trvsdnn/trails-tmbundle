@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>link_to (controller, action, id)</string>
 	<key>scope</key>
-	<string>text.html.ruby, text.haml</string>
+	<string>text.html.erb.rails, text.haml</string>
 	<key>tabTrigger</key>
 	<string>lt</string>
 	<key>uuid</key>

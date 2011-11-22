@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Template (ERB)</string>
 	<key>scope</key>
-	<string>text.html.ruby</string>
+	<string>text.html.erb.rails</string>
 	<key>settings</key>
 	<dict>
 		<key>shellVariables</key>

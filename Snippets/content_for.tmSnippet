@@ -9,7 +9,7 @@
 	<key>name</key>
 	<string>content_for</string>
 	<key>scope</key>
-	<string>text.html.ruby</string>
+	<string>text.html.erb.rails</string>
 	<key>tabTrigger</key>
 	<string>conf</string>
 	<key>uuid</key>

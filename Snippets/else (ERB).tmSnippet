@@ -8,7 +8,7 @@
 	<key>name</key>
 	<string>else (ERB)</string>
 	<key>scope</key>
-	<string>text.html.ruby</string>
+	<string>text.html.erb.rails</string>
 	<key>tabTrigger</key>
 	<string>else</string>
 	<key>uuid</key>

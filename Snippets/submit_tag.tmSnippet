@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>submit_tag</string>
 	<key>scope</key>
-	<string>text.html.ruby, text.haml</string>
+	<string>text.html.erb.rails, text.haml</string>
 	<key>tabTrigger</key>
 	<string>st</string>
 	<key>uuid</key>

@@ -11,7 +11,7 @@ ${TM_RAILS_TEMPLATE_END_RUBY_BLOCK}</string>
 	<key>name</key>
 	<string>form_for with errors</string>
 	<key>scope</key>
-	<string>text.html.ruby, text.haml</string>
+	<string>text.html.erb.rails, text.haml</string>
 	<key>tabTrigger</key>
 	<string>ffe</string>
 	<key>uuid</key>

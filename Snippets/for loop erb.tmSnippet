@@ -14,7 +14,7 @@
 	<key>name</key>
 	<string>for loop in rhtml</string>
 	<key>scope</key>
-	<string>text.html.ruby</string>
+	<string>text.html.erb.rails</string>
 	<key>tabTrigger</key>
 	<string>for</string>
 	<key>uuid</key>

@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>form_for file_field</string>
 	<key>scope</key>
-	<string>text.html.ruby, text.haml</string>
+	<string>text.html.erb.rails, text.haml</string>
 	<key>tabTrigger</key>
 	<string>ffff</string>
 	<key>uuid</key>

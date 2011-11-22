@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>f.submit (ffs)</string>
 	<key>scope</key>
-	<string>text.html.ruby, text.haml</string>
+	<string>text.html.erb.rails, text.haml</string>
 	<key>tabTrigger</key>
 	<string>f.</string>
 	<key>uuid</key>

@@ -9,7 +9,7 @@ ${TM_RAILS_TEMPLATE_END_RUBY_BLOCK}</string>
 	<key>name</key>
 	<string>form_for fields_for</string>
 	<key>scope</key>
-	<string>text.html.ruby, text.haml</string>
+	<string>text.html.erb.rails, text.haml</string>
 	<key>tabTrigger</key>
 	<string>nff</string>
 	<key>uuid</key>
