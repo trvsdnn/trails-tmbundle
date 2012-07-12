@@ -49,7 +49,6 @@ if TextMate.selected_text
     selected_text.gsub!(/^#{identing}/, "")
     
     file = File.open(partial, "w") { |f| f.write(selected_text) }
-    TextMate.rescan_project
 
     # Return the new render :partial line
     if current_file.extension == "haml"

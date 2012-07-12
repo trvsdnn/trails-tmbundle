@@ -51,5 +51,4 @@ RUBY
 FileUtils.mkdir_p migration_dir
 new_migration_filename = File.join(migration_dir, number + "_" + underscored + ".rb")
 File.open(new_migration_filename, "w") { |f| f.write generated_code }
-TextMate.rescan_project
 TextMate.open(new_migration_filename, 2, 8)

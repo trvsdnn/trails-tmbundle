@@ -60,7 +60,6 @@ if choice = TextMate.choose("Generate:", Generator.names, :title => "Rails Gener
 
     output = ruby(command)
     $logger.debug "Output: #{output}"
-    TextMate.rescan_project
     files = files_from_generator_output(output)
     files.each { |f| TextMate.open(File.join(rails_root, f)) }
     TextMate::UI.simple_notification(

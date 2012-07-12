@@ -16,7 +16,6 @@ class CommandGoToFile
         if rails_path.nil?
           TextMate.exit_discard
         end
-        TextMate.rescan_project
       end
       TextMate.open rails_path, openatline, openatcol
     else
