@@ -13,15 +13,25 @@ puts "&lt;meta http-equiv='Refresh' content='0;URL=#{url}'&gt;"
 	<string>word</string>
 	<key>input</key>
 	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^h</string>
 	<key>name</key>
 	<string>Documentation for Word</string>
-	<key>output</key>
-	<string>showAsHTML</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
 	<key>scope</key>
 	<string>source.ruby.rails, text.html.erb.rails, text.haml</string>
+	<key>semanticClass</key>
+	<string>lookup.define.ruby.rails</string>
 	<key>uuid</key>
 	<string>32F30207-D827-46D9-889A-451C35269D52</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
