@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby -W0
+#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -W0
 
 require "yaml"
 require "rails_bundle_tools"
