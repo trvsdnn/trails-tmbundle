@@ -6,7 +6,7 @@
 	<string>nop</string>
 	<key>command</key>
 	<string>RUBYLIB="$TM_BUNDLE_SUPPORT/lib:$RUBYLIB"
-"${TM_RUBY:=ruby}" -- "${TM_BUNDLE_SUPPORT}/bin/go_to_alternate_file.rb" model</string>
+"/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby" -- "${TM_BUNDLE_SUPPORT}/bin/go_to_alternate_file.rb" model</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
