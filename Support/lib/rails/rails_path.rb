@@ -131,9 +131,11 @@ class RailsPath
 
   ROOT_INDICATORS = %w( app config db )
   def rails_root
-    return nil unless TextMate.project_directory
+    raise "Can't find Rails root dir, try opeining it as a project" unless TextMate.project_directory
     ROOT_INDICATORS.each do |root_indicator|
-      return nil unless File.directory?(File.join(TextMate.project_directory, root_indicator))
+      unless File.directory?(File.join(TextMate.project_directory, root_indicator))
+        raise "Can't find #{root_indicator.inspect} dir"
+      end
     end
     return TextMate.project_directory
   end
