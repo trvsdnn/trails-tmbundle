@@ -10,7 +10,7 @@
 # Find the current version number from the schema.rb file
 export CURRENT=`grep 'Schema\.define' "$TM_PROJECT_DIRECTORY/db/schema.rb" | ruby -e 'print $stdin.read.scan(/\d+/).first'`
 
-"/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby" -- "${TM_BUNDLE_SUPPORT}/bin/rake_helper.rb" db:migrate -q "Migrate to which version? (Current version: $CURRENT)" -v VERSION
+"ruby18" -- "${TM_BUNDLE_SUPPORT}/bin/rake_helper.rb" db:migrate -q "Migrate to which version? (Current version: $CURRENT)" -v VERSION
 </string>
 	<key>input</key>
 	<string>none</string>

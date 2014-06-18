@@ -1,4 +1,4 @@
-#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+#!/usr/bin/env ruby18
 
 # To be run against files in this bundle to remove any
 # non-OS agnostic characters (see BADCHARS list)
