@@ -213,6 +213,10 @@
 						</dict>
 					</array>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.ruby</string>
+				</dict>
 			</array>
 		</dict>
 		<dict>
