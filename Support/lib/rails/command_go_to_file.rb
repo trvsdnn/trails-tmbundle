@@ -5,7 +5,7 @@ class CommandGoToFile
     choice = args.empty? ? current_file.best_match : args.shift
     if choice.nil?
       puts "This file is not associated with any other files"
-    elsif rails_path = current_file.rails_path_for(choice.to_sym)    
+    elsif rails_path = current_file.rails_path_for(choice.to_sym)
       # look for alternative erb file for projects using erb and haml
       if !rails_path.exists? && rails_path.extension == "haml"
         erb_rails_path = RailsPath.new(File.join(rails_path.path_name, "#{rails_path.file_name}.#{rails_path.content_type}.erb"))
@@ -21,8 +21,8 @@ class CommandGoToFile
     else
       puts "#{current_file.basename} does not have a #{choice}"
     end
-  end  
-  
+  end
+
   def self.on_current_line
     current_file = RailsPath.new
 
@@ -138,19 +138,19 @@ class CommandGoToFile
       else
         puts "No 'go to file' directives found on this line."
         # Do nothing -- beep?
-    end    
+    end
   end
-  
+
   protected
-  
-  # Returns the rails_path of the newly created file plus the position 
-  # (zero based) in the file where to place the caret after opening the 
+
+  # Returns the rails_path of the newly created file plus the position
+  # (zero based) in the file where to place the caret after opening the
   # new file. Returns nil when no new file is created.
-  def self.create_file(rails_path, choice)       
+  def self.create_file(rails_path, choice)
     return nil if rails_path.exists?
     if choice == :view
       filename = TextMate::UI.request_string(
-        :title => "View File Not Found", 
+        :title => "View File Not Found",
         :default => rails_path.basename,
         :prompt => "Enter the name of the new view file:",
         :button1 => 'Create'
@@ -160,7 +160,7 @@ class CommandGoToFile
       rails_path.touch
       return [rails_path, 0, 0]
     end
-    
+
     unless TextMate::UI.request_confirmation(
       :button1 => "Create",
       :button2 => "Cancel",
@@ -173,7 +173,7 @@ class CommandGoToFile
     generated_code, openatline, openatcol = case choice
     when :model
       ["class #{Inflector.singularize rails_path.controller_name.camelize} < ActiveRecord::Base\n\nend", 1, 0]
-    when :controller 
+    when :controller
       ["class #{rails_path.controller_name.camelize}Controller < ApplicationController\n\nend", 1, 0]
     when :helper
       ["module #{rails_path.controller_name.camelize}Helper\n\nend", 1, 0]
@@ -185,11 +185,11 @@ class #{Inflector.singularize(rails_path.controller_name).camelize}Test < Active
  def test_truth
    assert true
  end
-end", 3, 0]   
-    when :functional_test
+end", 3, 0]
+    when :controller_test
       ["require File.dirname(__FILE__) + '/../test_helper'
 
-class #{rails_path.controller_name.camelize}ControllerTest < ActionController::TestCase     
+class #{rails_path.controller_name.camelize}ControllerTest < ActionController::TestCase
 
 end", 3, 0]
     end
@@ -198,5 +198,5 @@ end", 3, 0]
     rails_path.append generated_code if generated_code
     return [rails_path, openatline, openatcol]
   end
-    
+
 end

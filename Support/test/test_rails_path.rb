@@ -103,7 +103,7 @@ class RailsPathTest < Test::Unit::TestCase
       # Basic tests
       [FIXTURE_PATH + '/app/controllers/user_controller.rb', :helper, FIXTURE_PATH + '/app/helpers/user_helper.rb'],
       [FIXTURE_PATH + '/app/controllers/user_controller.rb', :javascript, FIXTURE_PATH + '/public/javascripts/user.js'],
-      [FIXTURE_PATH + '/app/controllers/user_controller.rb', :functional_test, FIXTURE_PATH + '/test/functional/user_controller_test.rb'],
+      [FIXTURE_PATH + '/app/controllers/user_controller.rb', :controller_test, FIXTURE_PATH + '/test/functional/user_controller_test.rb'],
       [FIXTURE_PATH + '/app/helpers/user_helper.rb', :controller, FIXTURE_PATH + '/app/controllers/users_controller.rb'],
       [FIXTURE_PATH + '/app/models/user.rb', :controller, FIXTURE_PATH + '/app/controllers/users_controller.rb'],
       [FIXTURE_PATH + '/app/models/post.rb', :controller, FIXTURE_PATH + '/app/controllers/posts_controller.rb'],
@@ -115,7 +115,7 @@ class RailsPathTest < Test::Unit::TestCase
       # With modules
       [FIXTURE_PATH + '/app/controllers/admin/base_controller.rb', :helper, FIXTURE_PATH + '/app/helpers/admin/base_helper.rb'],
       [FIXTURE_PATH + '/app/controllers/admin/inside/outside_controller.rb', :javascript, FIXTURE_PATH + '/public/javascripts/admin/inside/outside.js'],
-      [FIXTURE_PATH + '/app/controllers/admin/base_controller.rb', :functional_test, FIXTURE_PATH + '/test/functional/admin/base_controller_test.rb'],
+      [FIXTURE_PATH + '/app/controllers/admin/base_controller.rb', :controller_test, FIXTURE_PATH + '/test/functional/admin/base_controller_test.rb'],
       [FIXTURE_PATH + '/app/helpers/admin/base_helper.rb', :controller, FIXTURE_PATH + '/app/controllers/admin/base_controller.rb'],
     ]
     # TODO Add [posts.yml, :model, post.rb]
@@ -181,9 +181,9 @@ class RailsPathTest < Test::Unit::TestCase
     end
 
     # test wacky
-    assert_equal(nil, 
-                 @rp_wacky.rails_path_for(:controller), 
-                 "wacky/wackier.rb has no associations") 
+    assert_equal(nil,
+                 @rp_wacky.rails_path_for(:controller),
+                 "wacky/wackier.rb has no associations")
   end
 
   def test_file_parts
@@ -214,9 +214,9 @@ class RailsPathTest < Test::Unit::TestCase
 
   def test_best_match
     assert_equal(nil, RailsPath.new(FIXTURE_PATH + '/config/boot.rb').best_match)
-    assert_equal(:functional_test, RailsPath.new(FIXTURE_PATH + '/app/controllers/posts_controller.rb').best_match)
+    assert_equal(:controller_test, RailsPath.new(FIXTURE_PATH + '/app/controllers/posts_controller.rb').best_match)
     assert_equal(:model, RailsPath.new(FIXTURE_PATH + '/app/controllers/users_controller.rb').best_match)
-    assert_equal(:functional_test, RailsPath.new(FIXTURE_PATH + '/app/controllers/admin/base_controller.rb').best_match)
+    assert_equal(controller_test:, RailsPath.new(FIXTURE_PATH + '/app/controllers/admin/base_controller.rb').best_match)
 
     TextMate.line_number = '3' # edit action
     assert_equal(:view, RailsPath.new(FIXTURE_PATH + '/app/controllers/admin/base_controller.rb').best_match)

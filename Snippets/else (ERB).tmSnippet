@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;% else %&gt;
+	<string>&lt;%- else -%&gt;
   </string>
 	<key>name</key>
 	<string>else (ERB)</string>

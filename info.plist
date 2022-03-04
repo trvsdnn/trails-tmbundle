@@ -3,9 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>contactEmailRot13</key>
-	<string>pnanqnqhnar@tznvy.pbz</string>
-	<key>contactName</key>
-	<string>Duane Johnson</string>
+	<string></string>
 	<key>deleted</key>
 	<array>
 		<string>43A61A22-6BEE-4997-961C-1CDE739C05FE</string>
@@ -37,7 +35,7 @@
 		<string>3F26FDB4-ACF9-4856-9312-6A4D78DC8564</string>
 	</array>
 	<key>description</key>
-	<string>&lt;a href="http://www.rubyonrails.com/"&gt;Ruby on Rails&lt;/a&gt; is a full-stack framework for developing database-backed web applications, in Ruby, according to the Model-View-Control pattern.</string>
+	<string></string>
 	<key>mainMenu</key>
 	<dict>
 		<key>excludedItems</key>
@@ -79,56 +77,6 @@
 		</array>
 		<key>submenus</key>
 		<dict>
-			<key>00C5D7D2-DA7A-4FA4-A787-EABC00B051CB</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>B41D3164-EA53-4DDC-850E-27B82B24061F</string>
-					<string>DDE1BA27-6259-4F87-A840-6A6E92C8594A</string>
-					<string>32AB6C81-2C22-45E0-B5FE-23CD3E420E70</string>
-				</array>
-				<key>name</key>
-				<string>respond_to</string>
-			</dict>
-			<key>054985A5-E001-462A-8674-47C02C751A80</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>D696FA2C-785A-4B73-A2F6-F750904DD7C2</string>
-					<string>------------------------------------</string>
-					<string>8D802011-B3E5-4BC1-A3E1-5B78A2A49C28</string>
-					<string>6909D8A7-461B-4D29-956F-8E633DD49A90</string>
-					<string>F4DD75AA-A954-4FBE-A03F-28718335414E</string>
-				</array>
-				<key>name</key>
-				<string>Migrations</string>
-			</dict>
-			<key>083B7598-7DA0-4BDE-BBD3-290F06927E48</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>F57522B2-9F5F-4DF9-AE46-9478AF019C63</string>
-					<string>B25B7560-FACB-4A9E-A226-B71C796BD1F3</string>
-					<string>D2783155-23F3-4B90-A317-5BD139471193</string>
-				</array>
-				<key>name</key>
-				<string>ActiveSupport</string>
-			</dict>
-			<key>2005C9DA-00DD-43D7-9F59-169CC8E953FC</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>273E5E76-8D13-4476-9C38-8AF87432CB96</string>
-					<string>390A447F-0FA3-4F01-A10C-4F35675E0A43</string>
-					<string>8B914165-9C66-4FA3-9AD6-1DA41B25F8F1</string>
-					<string>62BEA590-F4EF-4001-B661-764EDFB92811</string>
-					<string>CFDC27A3-58CF-4198-8F93-36360978F0D0</string>
-					<string>5ACBF49D-B5A5-495C-89D8-18AA740D9D02</string>
-					<string>028DA0A4-B310-4BEF-8643-2A22993C21C7</string>
-				</array>
-				<key>name</key>
-				<string>RJS</string>
-			</dict>
 			<key>245AD020-669A-46E1-8123-4B9CFDF8075A</key>
 			<dict>
 				<key>items</key>
@@ -154,21 +102,10 @@
 				<array>
 					<string>8F87F3C7-8ABB-4778-9786-64CF95E99160</string>
 					<string>5D01527E-48FA-4A3D-A10B-A383C8AE3942</string>
-					<string>CEA1D76C-DEB0-4ADB-840D-220E569D5B8F</string>
-					<string>------------------------------------</string>
 					<string>83B80B60-6143-4465-B064-0DA25DDDCAA7</string>
 				</array>
 				<key>name</key>
 				<string>Scopes</string>
-			</dict>
-			<key>49F94121-E840-4BB3-B276-11B543A9CE21</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>017634C2-FC55-41BA-B551-82436809D71B</string>
-				</array>
-				<key>name</key>
-				<string>Caching</string>
 			</dict>
 			<key>4D3A01D4-ACA8-49AF-B1DD-428B823964C3</key>
 			<dict>
@@ -220,16 +157,6 @@
 				<key>name</key>
 				<string>render</string>
 			</dict>
-			<key>5BB42460-A269-4088-B892-595072CCF4F6</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>5C773E3D-436E-4A28-8399-859CE41E504F</string>
-					<string>675DD92F-42F1-4B55-B56A-5D4ABC1375C4</string>
-				</array>
-				<key>name</key>
-				<string>Gemfile</string>
-			</dict>
 			<key>5CCEA099-4B20-4BC3-96B9-BD9BF57279F5</key>
 			<dict>
 				<key>items</key>
@@ -245,21 +172,6 @@
 				</array>
 				<key>name</key>
 				<string>Models</string>
-			</dict>
-			<key>5FBC0312-D9B1-11DC-94E9-00112475D960</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>DC549A45-D9B0-11DC-94E9-00112475D960</string>
-					<string>F4EA552D-D9B0-11DC-94E9-00112475D960</string>
-					<string>04A30A4D-D9B1-11DC-94E9-00112475D960</string>
-					<string>0D966168-D9B1-11DC-94E9-00112475D960</string>
-					<string>190401C2-D9B1-11DC-94E9-00112475D960</string>
-					<string>212C3047-D9B1-11DC-94E9-00112475D960</string>
-					<string>2C60CBA1-D9B1-11DC-94E9-00112475D960</string>
-				</array>
-				<key>name</key>
-				<string>Run Tests</string>
 			</dict>
 			<key>6177A998-CF02-49A1-9C98-D775ABF41A97</key>
 			<dict>
@@ -315,43 +227,6 @@
 				<key>name</key>
 				<string>Controllers</string>
 			</dict>
-			<key>7D82F39F-FDF4-4EE3-BA8F-4CA43A074804</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>54F61419-001F-4B71-83AC-8DC633694AF0</string>
-				</array>
-				<key>name</key>
-				<string>REST methods</string>
-			</dict>
-			<key>7D9194BB-2BCC-4E20-84C8-0990B77D5515</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>89198999-7E6D-4D97-A20E-45263E1CA993</string>
-					<string>A2477223-AD5A-4723-8052-943CE9BA634D</string>
-					<string>47944705-F605-4ED4-B4C0-9E823EE25138</string>
-					<string>85E9264C-5414-4FA0-AC07-F305A798ED46</string>
-					<string>B5893618-D07C-48F1-8867-736D0AAFF0E7</string>
-					<string>1354726C-DA64-4CA6-A099-26626A865D8D</string>
-					<string>4CC98A56-B60B-4A89-80E0-400C5314A050</string>
-					<string>869AB0B7-12DD-440A-905A-BFB1E0E16E1C</string>
-					<string>4611F02E-E9BF-11DC-8518-00112475D960</string>
-					<string>47FF50AF-E9BF-11DC-8518-00112475D960</string>
-					<string>EB47FBA1-AFB3-42F9-94A4-552D3175C17A</string>
-					<string>14BF0586-F2E8-4AB3-BB4B-E49099384403</string>
-					<string>5CE8838A-BF2C-497E-B87A-E90C3BC482E0</string>
-					<string>EC511A43-D3B7-11DC-BA49-00112475D960</string>
-					<string>B21BA16D-7C04-4912-8488-425CDCC332A8</string>
-					<string>CF506019-E964-4172-A3DA-475AE3B65558</string>
-					<string>5DAC28A7-33C8-4DA7-9E85-56618D6BEC9F</string>
-					<string>F5CBBE16-F5CC-4EDA-8BC6-30281BD7D854</string>
-					<string>F8316545-9AE4-4C7F-87ED-A2C00E6637FA</string>
-					<string>43680344-0818-42BF-95B4-58CD2D76545B</string>
-				</array>
-				<key>name</key>
-				<string>Validations</string>
-			</dict>
 			<key>8113246B-122E-4F4A-9B5A-98390900839E</key>
 			<dict>
 				<key>items</key>
@@ -375,25 +250,6 @@
 				</array>
 				<key>name</key>
 				<string>Functional Tests</string>
-			</dict>
-			<key>88B6256D-A8BF-46A9-8A6B-651D089D5F67</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>985F56D4-82ED-4C45-8250-2ECCFC71957E</string>
-					<string>07C696F8-79F5-4E0B-9EE9-03B693A54ABB</string>
-					<string>9A1AE6BA-8350-4AB7-B5BD-969A7E64CF29</string>
-					<string>CFDA9F62-D071-4E0F-AD10-66AE0729FFCF</string>
-					<string>------------------------------------</string>
-					<string>5EEA0C71-B34B-4408-953B-F47AAD343CCC</string>
-					<string>F758BFD1-00CA-4742-BE71-032580080F5C</string>
-					<string>------------------------------------</string>
-					<string>6DEF923E-2347-46EC-AFBE-183D08E63DC1</string>
-					<string>310C901C-EF32-4E88-938A-804ABBF8C428</string>
-					<string>6F2AB859-46E3-4FF5-A9A7-E9A813AB5DE1</string>
-				</array>
-				<key>name</key>
-				<string>Database</string>
 			</dict>
 			<key>8D802011-B3E5-4BC1-A3E1-5B78A2A49C28</key>
 			<dict>
@@ -423,18 +279,6 @@
 				</array>
 				<key>name</key>
 				<string>Change columns t. drop-down list</string>
-			</dict>
-			<key>9EB71DE4-93D3-466C-B1D8-54892538FF3A</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>62C3838B-0790-4FC2-8425-F273A57F5D33</string>
-					<string>78FCF992-D01B-404F-BC54-5EE7B91F999A</string>
-					<string>F1BE0C3D-7203-43E9-BEFB-D1A99CDD31C1</string>
-					<string>C12C98A5-74E5-4E70-9ADB-8783455D6539</string>
-				</array>
-				<key>name</key>
-				<string>Ajax Tests</string>
 			</dict>
 			<key>A1D9600C-4E0B-4ABF-9C0A-19AD7A168A15</key>
 			<dict>
@@ -479,12 +323,6 @@
 				<array>
 					<string>59CD3A41-8164-4FB4-B462-D7ACE86BCDBF</string>
 					<string>A017AB39-A875-40DC-8ACF-7E3551057CA0</string>
-					<string>FE430ECD-5D40-4D95-A73B-F064C73992DE</string>
-					<string>8B515110-41D3-11DD-AE16-0800200C9A66</string>
-					<string>B105C480-FB21-4511-9AD0-D5B4FED3BA21</string>
-					<string>B660FC85-F69A-43BC-A72A-748CBEA0AA9A</string>
-					<string>------------------------------------</string>
-					<string>7CC002AE-83BA-4294-B87D-DE9790839D97</string>
 				</array>
 				<key>name</key>
 				<string>Finders</string>
@@ -511,24 +349,6 @@
 				<key>name</key>
 				<string>Create columns t. drop-down list</string>
 			</dict>
-			<key>AA879356-48FB-48A6-8BF3-0EF40A592691</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>A909C4C3-8EFE-4E39-9D96-BA8F0ABE6085</string>
-					<string>AFE06B67-CE98-42A6-93D1-8EC8E3B9F83C</string>
-					<string>9D7228B3-A6ED-4598-B096-032B3600864F</string>
-					<string>EF527A27-D1D4-4FD8-BD23-71397881C29A</string>
-					<string>F2F3167C-73B9-11D9-B752-000D932CD5BA</string>
-					<string>2233B484-73BA-11D9-B752-000D932CD5BA</string>
-					<string>053490FE-73BA-11D9-B752-000D932CD5BA</string>
-					<string>0C137FBF-73BA-11D9-B752-000D932CD5BA</string>
-					<string>18D3C1C3-73BA-11D9-B752-000D932CD5BA</string>
-					<string>BC194AE7-FA60-4E65-9503-6920D1666A29</string>
-				</array>
-				<key>name</key>
-				<string>redirect_to</string>
-			</dict>
 			<key>B5104C6E-E4BF-11DC-A11A-00112475D960</key>
 			<dict>
 				<key>items</key>
@@ -550,22 +370,6 @@
 				</array>
 				<key>name</key>
 				<string>Create columns helpers</string>
-			</dict>
-			<key>B89CD2E9-4271-41BB-8AF6-A747553D99EB</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>B8F08BD7-6160-482C-8A3D-CBC6BD2079A4</string>
-					<string>2AC3AC1F-743B-4A33-863C-C37885073806</string>
-					<string>BD2E4045-54E6-450E-B31B-5E1865CFFBC9</string>
-					<string>F396B7BD-8255-48B1-904A-06E7D7CC2741</string>
-					<string>3E3AF538-171B-4108-AB92-827AD7E24C77</string>
-					<string>9D58B6C9-BA52-48B3-B639-D5CB894AF810</string>
-					<string>------------------------------------</string>
-					<string>D414D70D-BD2D-4C15-BDA6-1AAEABF7791F</string>
-				</array>
-				<key>name</key>
-				<string>Associations</string>
 			</dict>
 			<key>BA9F12E8-9151-4975-8E8A-9644290E6038</key>
 			<dict>
@@ -594,24 +398,6 @@
 				</array>
 				<key>name</key>
 				<string>Change columns helpers</string>
-			</dict>
-			<key>CD88AD5A-7F20-4D4C-882A-31E1CDFDFD16</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>A1776279-5396-4FE9-9218-8BF2C88C5271</string>
-					<string>44FBD811-70A9-462B-AC56-F975ADAD62AF</string>
-					<string>523BE8A6-0845-493D-A9B6-532F73D21950</string>
-					<string>4D1787E3-1583-4CF3-8D99-CC45D7C35EED</string>
-					<string>D64D8863-DCB6-4397-B5B0-073E0AE04167</string>
-					<string>279D1981-B055-4693-B9AF-5B571A62A6AE</string>
-					<string>3F4B502B-5F68-4687-88E9-6EF3BDF9677D</string>
-					<string>0C9EA1A1-66C5-4E1C-9C30-E1FFE8EC6EAE</string>
-					<string>1C20EEBE-B4BA-48C8-9B33-7B5BB00D958C</string>
-					<string>A2F3E8C1-4216-4890-8491-2F8C7534ED03</string>
-				</array>
-				<key>name</key>
-				<string>Callbacks</string>
 			</dict>
 			<key>D4D18AD6-11DA-47F2-AAD8-F2F350EE2BB9</key>
 			<dict>
@@ -705,7 +491,7 @@
 		</dict>
 	</dict>
 	<key>name</key>
-	<string>Ruby on Rails</string>
+	<string>Trails</string>
 	<key>ordering</key>
 	<array>
 		<string>1970AE74-3949-40B3-B263-727AA3FF167A</string>

@@ -2,12 +2,11 @@
 
 require 'rails_bundle_tools'
 require 'fileutils'
-require 'rubygems'
 require "#{ENV['TM_SUPPORT_PATH']}/lib/tm/htmloutput"
 
 class FindMethod
   attr_accessor :found_methods, :root, :filepath, :term
-  
+
   def initialize(term, filepath = RailsPath.new)
     @term = term
     @term = @term + $1 if TextMate.current_line.match(Regexp.new(Regexp.escape(@term) + '(!|\?)'))
@@ -17,7 +16,7 @@ class FindMethod
     self.find
     self.render_results
   end
-  
+
   def method_regexp_for(term)
     "^\\s*def (self\.)?#{Regexp.escape(term)}([\(]{1}[^\)]*[\)]{1}\\s*$|\\s*$)"
   end
@@ -33,7 +32,7 @@ class FindMethod
   def variable_regexp_for(term)
     "#{Regexp.escape(term)}\\s="
   end
-  
+
   def path_regexp_for(term)
     "[^\.].resource[s]? (:|')#{term}(s|es)?[']?"
   end
@@ -49,7 +48,7 @@ class FindMethod
       return false
     end
   end
-  
+
   def found_in_file(file, match_string)
     begin
       File.open(file) do |f|
@@ -68,18 +67,11 @@ class FindMethod
     end
   end
 
-  def find_in_gems(match_string)
-    Gem.latest_load_paths.each do |directory|
-      find_in_directory(directory, match_string)
-    end
-  end
-
   def find_class_or_module
     match = class_or_module_regexp_for(@term)
     find_in_directory(@root, match)
-    find_in_gems(match)
   end
-  
+
   def find_variable
     @term = "@#{@term}"
     if @filepath.file_type == :view
@@ -95,8 +87,8 @@ class FindMethod
       find_in_file(TextMate.filepath, variable_regexp_for(@term))
     end
   end
-  
-  def find_method    
+
+  def find_method
     find_in_directory(@root, method_regexp_for(@term))
     find_in_directory(File.join(@root,'app','models'), association_regexp_for(@term))
 
@@ -104,10 +96,8 @@ class FindMethod
       path = path[2].split('_').first
       find_in_file(File.join(@root,"config","routes.rb"), path_regexp_for(path))
     end
-
-    find_in_gems(method_regexp_for(@term))
   end
-  
+
   def find
     case
     when @term=~/^[A-Z]/ then find_class_or_module # First, if this starts with a capital, it's probably a class or a module
@@ -115,12 +105,12 @@ class FindMethod
     else find_method # Otherwise, try to find it as a method
     end
   end
-  
+
   def render_results
     @found_methods.uniq!
     if @found_methods.empty?
       TextMate.exit_show_tool_tip("Could not find definition for '#{@term}'")
-    elsif @found_methods.size == 1  
+    elsif @found_methods.size == 1
       TextMate.open(File.join(@found_methods[0][:filename]), @found_methods[0][:line_number] - 1)
       TextMate.exit_show_tool_tip("Found definition for '#{@term}' in #{@found_methods[0][:filename].gsub("#{@root}/",'')}")
     else
@@ -141,7 +131,7 @@ class FindMethod
       TextMate.exit_show_html
     end
   end
-  
+
 end
 
 FindMethod.new(TextMate.selected_text || TextMate.current_word)

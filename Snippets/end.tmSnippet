@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;% end %&gt;</string>
+	<string>&lt;%- end -%&gt;</string>
 	<key>name</key>
 	<string>end (ERB)</string>
 	<key>scope</key>

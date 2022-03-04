@@ -13,13 +13,13 @@ require 'fileutils'
 
 module AssociationMessages
   @@associations = {
-    :controller => [:functional_test, :helper, :model, :javascript, :stylesheet, :fixture],
-    :helper => [:controller, :model, :unit_test, :functional_test, :javascript, :stylesheet, :fixture],
+    :controller => [:controller_test, :helper, :model, :javascript, :stylesheet, :fixture],
+    :helper => [:controller, :model, :unit_test, :controller_test, :javascript, :stylesheet, :fixture],
     :view => [:controller, :javascript, :stylesheet, :helper, :model],
-    :model => [:unit_test, :functional_test, :controller, :helper, :fixture],
-    :fixture => [:unit_test, :functional_test, :controller, :helper, :model],
-    :functional_test => [:controller, :helper, :model, :unit_test, :fixture],
-    :unit_test => [:model, :controller, :helper, :functional_test, :fixture],
+    :model => [:unit_test, :controller_test, :controller, :helper, :fixture],
+    :fixture => [:unit_test, :controller_test, :controller, :helper, :model],
+    :controller_test => [:controller, :helper, :model, :unit_test, :fixture],
+    :unit_test => [:model, :controller, :helper, :controller_test, :fixture],
     :javascript => [:helper, :controller],
     :stylesheet => [:helper, :controller]
   }
@@ -100,7 +100,7 @@ class RailsPath
     when :helper     then name.sub!(/_helper$/, '')
     when :unit_test  then name.sub!(/_test$/, '')
     when :view       then name = dirname.split('/').pop
-    when :functional_test then name.sub!(/_controller_test$/, '')
+    when :controller_test then name.sub!(/_controller_test$/, '')
     else
       if !File.file?(File.join(rails_root, stubs[:controller], '/', name + '_controller.rb'))
         name = Inflector.pluralize(name)
@@ -116,7 +116,7 @@ class RailsPath
         buffer.find_method(:direction => :backward).last rescue nil
       when :view
         basename
-      when :functional_test
+      when :controller_test
         buffer.find_method(:direction => :backward).last.sub('^test_', '')
       else nil
       end
@@ -145,17 +145,16 @@ class RailsPath
 
   def file_type
     return @file_type if @file_type
-
     @file_type =
       case @filepath
-      when %r{/controllers/(.+_controller\.(rb))$}      then :controller
-      when %r{/controllers/(application\.(rb))$}        then :controller
-      when %r{/helpers/(.+_helper\.rb)$}                then :helper
-      when %r{/views/(.+\.(#{VIEW_EXTENSIONS * '|'}))$} then :view
-      when %r{/models/(.+\.(rb))$}                      then :model
+      when %r{/app/controllers/(.+_controller\.(rb))$}      then :controller
+      when %r{/app/controllers/(application\.(rb))$}        then :controller
+      when %r{/app/helpers/(.+_helper\.rb)$}                then :helper
+      when %r{/app/views/(.+\.(#{VIEW_EXTENSIONS * '|'}))$} then :view
+      when %r{/app/models/(.+\.(rb))$}                      then :model
       when %r{/.+/fixtures/(.+\.(yml|csv))$}            then :fixture
-      when %r{/test/functional/(.+\.(rb))$}             then :functional_test
-      when %r{/test/unit/(.+\.(rb))$}                   then :unit_test
+      when %r{/test/controllers/(.+\.(rb))$}             then :controller_test
+      when %r{/test/models/(.+\.(rb))$}                  then :unit_test
       when %r{/public/javascripts/(.+\.(js))$}          then :javascript
       when %r{/public/stylesheets/(?:sass/)?(.+\.(css|sass))$}  then :stylesheet
       else nil
@@ -185,8 +184,8 @@ class RailsPath
     file_type == :view and basename !~ /^_/
   end
 
-  def modules 
-    return nil if tail.nil? 
+  def modules
+    return nil if tail.nil?
     if file_type == :view
       tail.split('/').slice(0...-2)
     else
@@ -204,7 +203,7 @@ class RailsPath
          map { |name| name + '_controller' }
       end
     when :helper     then controller_name + '_helper'
-    when :functional_test then controller_name + '_controller_test'
+    when :controller_test then controller_name + '_controller_test'
     when :unit_test  then Inflector.singularize(controller_name) + '_test'
     when :model      then Inflector.singularize(controller_name)
     when :fixture    then Inflector.pluralize(controller_name)
@@ -222,17 +221,17 @@ class RailsPath
     end
     controller_names
   end
-  
+
   def default_extension_for(type, view_format = nil)
     case type
     when :javascript then ENV['RAILS_JS_EXT'] || '.js'
     when :stylesheet then ENV['RAILS_CSS_EXT'] || (wants_haml ? '.sass' : '.css')
-    when :view       then                    
+    when :view       then
       view_format = :html if view_format.nil?
       case view_format.to_sym
       when :xml, :rss, :atom then ".#{view_format}.builder"
       when :js  then '.js.rjs'
-      else 
+      else
         rails_view_ext = ENV['RAILS_VIEW_EXT'] || (wants_haml ? 'haml' : 'erb')
         ".#{view_format}.#{rails_view_ext}"
       end
@@ -241,7 +240,7 @@ class RailsPath
     end
   end
 
-  def rails_path_for(type)    
+  def rails_path_for(type)
     return nil if file_type.nil?
     return rails_path_for_view if type == :view
     if TextMate.project_directory
@@ -307,8 +306,8 @@ class RailsPath
       :log => 'log',
       :javascript => 'public/javascripts',
       :stylesheet => wants_haml ? 'public/stylesheets/sass' : 'public/stylesheets',
-      :functional_test => 'test/functional',
-      :unit_test => 'test/unit',
+      :controller_test => 'test/controllers',
+      :unit_test => 'test/models',
       :fixture => 'test/fixtures'}
   end
 

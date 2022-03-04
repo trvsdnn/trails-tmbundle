@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;% if ${1:condition} %&gt;$0</string>
+	<string>&lt;%- if ${1:condition} -%&gt;$0</string>
 	<key>name</key>
 	<string>if (ERB)</string>
 	<key>scope</key>

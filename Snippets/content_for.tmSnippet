@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;% content_for :${1:yield_label_in_layout} do -%&gt;
+	<string>&lt;%- content_for :${1:yield_label_in_layout} do -%&gt;
 	$0
-&lt;% end -%&gt;</string>
+&lt;%- end -%&gt;</string>
 	<key>name</key>
 	<string>content_for</string>
 	<key>scope</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>scope :${1:name}, lambda { |${2:param}| ${3:where(${4::${5:field} =&gt; ${6:"${7:value}"}})} }</string>
+	<string>scope :${1:name}, lambda { |${2:param}| ${3where(${4::${5:field}: ${6:"${7:value}"}})} }</string>
 	<key>name</key>
 	<string>scope lambda</string>
 	<key>scope</key>

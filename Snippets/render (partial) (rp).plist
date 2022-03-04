@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>render :partial =&gt; "${1:item}"</string>
+	<string>&lt;%= render '${1:item}' %&gt;</string>
 	<key>name</key>
 	<string>render (partial)</string>
 	<key>scope</key>
-	<string>source.ruby.rails, text.html.erb.rails, text.haml</string>
+	<string>text.html.erb.rails</string>
 	<key>tabTrigger</key>
-	<string>rp</string>
+	<string>partial</string>
 	<key>uuid</key>
 	<string>498168A5-5AF8-4F59-8A2D-B517FAB98CDB</string>
 </dict>

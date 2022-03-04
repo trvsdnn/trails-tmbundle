@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>get '${1:recent}'${2:, :on =&gt; :${3:member}}</string>
+	<string>get '${1:recent}'${2:, on: :${3:member}}</string>
 	<key>name</key>
 	<string>get :on =&gt; :member</string>
 	<key>scope</key>
