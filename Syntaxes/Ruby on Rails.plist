@@ -290,6 +290,18 @@
 			<string>support.function.activesupport.rails</string>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>\b(assert|assert_equal|assert_same|assert_nil|assert_empty|assert_match|assert_no_match|assert_includes|assert_in_delta|assert_in_epsilon|assert_throws|assert_raises|assert_instance_of|assert_kind_of|assert_respond_to|assert_operator|assert_predicate|assert_output|assert_send|assert_silent|must_be|must_be_close_to|must_be_empty|must_be_instance_of|must_be_kind_of|must_be_nil|must_be_same_as|must_be_silent|must_be_within_epsilon|must_equal|must_include|must_match|must_output|must_raise|must_respond_to|must_throw|path_must_exist|assert_difference|assert_no_difference|assert_changes|assert_no_changes|assert_nothing_raised|assert_recognizes|assert_generates|assert_response|assert_redirected_to)\b(?!:)</string>
+			<key>name</key>
+			<string>support.function.test.assertion.ruby</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(refute|refute_empty|refute_equal|refute_in_delta|refute_in_epsilon|refute_includes|refute_instance_of|refute_kind_of|refute_match|refute_nil|refute_operator|refute_predicate|refute_respond_to|refute_same|assert_not|assert_not_equal|assert_not_same|assert_not_nil|assert_not_empty|assert_not_includes|assert_not_in_delta|assert_not_in_epsilon|assert_not_instance_of|assert_not_kind_of|assert_not_respond_to|assert_not_operator|assert_not_predicate|wont_be|wont_be_close_to|wont_be_empty|wont_be_instance_of|wont_be_kind_of|wont_be_nil|wont_be_same_as|wont_be_within_epsilon|wont_equal|wont_include|wont_match|wont_respond_to|path_wont_exist)\b(?!:)</string>
+			<key>name</key>
+			<string>support.function.test.refutation.ruby</string>
+		</dict>
+		<dict>
 			<key>include</key>
 			<string>source.ruby</string>
 		</dict>
